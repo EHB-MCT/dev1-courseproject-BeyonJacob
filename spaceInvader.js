@@ -3,8 +3,8 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let context = canvas.getContext("2d");
 
-squ1();
-function squ1()
+signature();
+function signature()
 {
 context.beginPath();
 context.fillStyle = '#707cd5'
