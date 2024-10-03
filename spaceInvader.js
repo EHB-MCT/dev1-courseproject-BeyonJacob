@@ -3,18 +3,26 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let context = canvas.getContext("2d");
 
-signature();
-function signature()
-{
-context.beginPath();
-context.fillStyle = '#707cd5'
-context.fillRect(50, 500, 500, 100);
-context.fillRect(150, 400, 300, 100);
-context.fillRect(250, 300, 100, 100);
-context.fillRect(50, 300, 100, 100);
-context.fillRect(450, 300, 100, 100);
-context.fillRect(150, 200, 300, 100);
-context.fillRect(150, 100, 100, 100);
-context.fillRect(350, 100, 100, 100);
-context.stroke();
+box()
+function box() {
+    context.fillStyle = 'black'
+    context.fillRect(10, 10, 300, 300);
 }
+
+signature();
+function signature() {
+    context.fillStyle = '#707cd5'
+    context.fillRect(35, 230, 250, 50);
+    context.fillRect(85, 80, 150, 50);
+    context.fillRect(235, 130, 50, 50);
+    context.fillRect(35, 130, 50, 50);
+    context.fillRect(135, 130, 50, 50);
+    context.fillRect(85, 180, 150, 50);
+    context.fillRect(185, 30, 50, 50);
+    context.fillRect(85, 30, 50, 50);
+
+}
+
+
+
+
