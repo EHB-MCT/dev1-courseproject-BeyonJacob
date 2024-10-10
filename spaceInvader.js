@@ -3,15 +3,17 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let context = canvas.getContext("2d");
 
-box()
+box();
+signature();
+ 
 function box() {
-    context.fillStyle = 'black'
+    context.fillStyle = 'black';
     context.fillRect(10, 10, 300, 300);
 }
 
-signature();
+
 function signature() {
-    context.fillStyle = '#707cd5'
+    context.fillStyle = '#707cd5';
     context.fillRect(35, 230, 250, 50);
     context.fillRect(85, 80, 150, 50);
     context.fillRect(235, 130, 50, 50);
