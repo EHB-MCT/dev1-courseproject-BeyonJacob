@@ -59,8 +59,6 @@ function createRandompoly() {
   };
 }
 
-
-
 //Deze poly is gemaakt met met hulp chatgpt en ik heb er zelf een paar wijzigingen in aangebracht.
 function stars(x, y, size, color, sides = 10) {
   const angleStep = Math.PI * 2 / sides;
@@ -90,17 +88,28 @@ function AnimationLoop() {
   context.fillStyle = "#DCDCF8";
   context.fillRect(1000, 1000, width, height);
 
-  drawText();
-  function drawText() {
-    context.font = "bold 40px Arial";
-  
-    const text = "BEYON JACOB";
-    const textWidth = context.measureText(text).width;
-    context.fillStyle = "#0a3a3f";
-    const x = (width - textWidth) / 2;
-    const y = height / 2;
-    context.fillText(text, x, y);
+  box();
+  signature();
+   
+  function box() {
+      context.fillStyle = 'white';
+      context.fillRect(1550, 550, 300, 300);
   }
+  
+  
+  function signature() {
+      context.fillStyle = '#707cd5';
+      context.fillRect(1575, 775, 250, 50);
+      context.fillRect(1625, 725, 150, 50);
+      context.fillRect(1775, 675, 50, 50);
+      context.fillRect(1575, 675, 50, 50);
+      context.fillRect(1675, 675, 50, 50);
+      context.fillRect(1625, 625, 150, 50);
+      context.fillRect(1725, 575, 50, 50);
+      context.fillRect(1625, 575, 50, 50);
+  
+  }
+  
   
   for (let i = 0; i < polygons.length; i++) {
     if (polygons[i].y < -polygons[i].size) {
@@ -118,3 +127,6 @@ function AnimationLoop() {
 
   requestAnimationFrame(AnimationLoop);
 }
+
+
+// gpt chat link: https://chatgpt.com/share/6762f950-e1a8-8001-87c7-524a2edb62e3
