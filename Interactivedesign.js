@@ -90,27 +90,27 @@ function AnimationLoop() {
 
   box();
   signature();
-   
+
   function box() {
-      context.fillStyle = 'white';
-      context.fillRect(1550, 550, 300, 300);
+    context.fillStyle = 'white';
+    context.fillRect(1550, 550, 300, 300);
   }
-  
-  
+
+
   function signature() {
-      context.fillStyle = '#707cd5';
-      context.fillRect(1575, 775, 250, 50);
-      context.fillRect(1625, 725, 150, 50);
-      context.fillRect(1775, 675, 50, 50);
-      context.fillRect(1575, 675, 50, 50);
-      context.fillRect(1675, 675, 50, 50);
-      context.fillRect(1625, 625, 150, 50);
-      context.fillRect(1725, 575, 50, 50);
-      context.fillRect(1625, 575, 50, 50);
-  
+    context.fillStyle = '#707cd5';
+    context.fillRect(1575, 775, 250, 50);
+    context.fillRect(1625, 725, 150, 50);
+    context.fillRect(1775, 675, 50, 50);
+    context.fillRect(1575, 675, 50, 50);
+    context.fillRect(1675, 675, 50, 50);
+    context.fillRect(1625, 625, 150, 50);
+    context.fillRect(1725, 575, 50, 50);
+    context.fillRect(1625, 575, 50, 50);
+
   }
-  
-  
+
+
   for (let i = 0; i < polygons.length; i++) {
     if (polygons[i].y < -polygons[i].size) {
       polygons.splice(i, 1);
@@ -118,7 +118,7 @@ function AnimationLoop() {
     polygons[i].x += Math.cos(polygons[i].direction) * windSpeed; // Horizontal 
     polygons[i].y += Math.sin(polygons[i].direction) * windSpeed; // Vertical 
     polygons[i].opacity -= 100;
-    polygons[i].color.r = (polygons[i].color.r + 1) % 256; 
+    polygons[i].color.r = (polygons[i].color.r + 1) % 256;
     polygons[i].color.g = (polygons[i].color.g + 1) % 256;
     polygons[i].color.b = (polygons[i].color.b + 1) % 256;
 
