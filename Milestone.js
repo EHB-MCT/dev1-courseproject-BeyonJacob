@@ -147,4 +147,3 @@ function TV() {
     context.fillStyle = '#555';
     context.fillRect(centerX + (tvWidth / 4), centerY + tvHeight, tvWidth / 2, 20);
 }
-
